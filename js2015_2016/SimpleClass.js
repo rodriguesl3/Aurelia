@@ -83,6 +83,10 @@ Versão 3 (Inherance)
 
 //Versão 4 (Decorators and Class properties) EcmaScript 7
 // jspm install aurelia-framework aurelia-fetch-client
+// em config.js foi adicionado duas linhas 
+// "es7.decorators",
+// "es7.classProperties"
+// em babelOptions.optionals:[]
 
 
  import {MyBase} from "MyBase";
