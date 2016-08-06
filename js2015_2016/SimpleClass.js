@@ -56,7 +56,6 @@ export class SimpleClass extends MyBase {
     get message(){
         return "Hello ES2015";
     }
-
     calculate(){
         return 43;
     }
