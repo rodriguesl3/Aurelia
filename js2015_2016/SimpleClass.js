@@ -46,9 +46,9 @@ Versão 2 (Modules)
 Versão 3 (Inherance)
  Vamos adicionar a palavra extends
  */
-import {MyBase} from "MyBase";
+ import {myBase} from "MyBase";
 
-export class SimpleClass extends MyBase {
+export class SimpleClass extends myBase {
     constructor(){
         super();
 

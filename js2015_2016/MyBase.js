@@ -1,5 +1,8 @@
 export class MyBase {
-    someBaseMethod(){
-        return 'doing by inherance.';
+    constructor() {
+    this.value = "test";
+    }
+    someBaseMethod() {
+        return "doing by inherance.";
     }
 }
