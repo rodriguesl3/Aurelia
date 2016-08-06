@@ -43,6 +43,10 @@
             console.log(mySimple.calculate());
             //Versão 3 (consumindo método por hernaça.)
             console.log(mySimple.someBaseMethod());
+
+            mySimple.startEngine().then((result)=>{
+                console.log(result);
+            })
         }); 
 
 

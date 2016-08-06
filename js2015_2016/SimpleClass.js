@@ -68,6 +68,18 @@ export class SimpleClass extends MyBase {
     calculate(){
         return compute()+ val2;
     }
+
+//Estamos utilizando Promises disponivel em ES2015
+//
+    startEngine(){
+        var promise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve("Engine started!");
+            },5000);
+        });
+       return promise;
+    }
+
 }
 
 
