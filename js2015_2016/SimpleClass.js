@@ -46,12 +46,11 @@ Versão 2 (Modules)
 Versão 3 (Inherance)
  Vamos adicionar a palavra extends
  */
- import {myBase} from "MyBase";
+ import {MyBase} from "MyBase";
 
-export class SimpleClass extends myBase {
+export class SimpleClass extends MyBase {
     constructor(){
         super();
-
         this.name = "Lucas";
     }
     get message(){
