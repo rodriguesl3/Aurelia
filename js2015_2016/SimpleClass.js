@@ -46,14 +46,59 @@ Versão 2 (Modules)
 Versão 3 (Inherance)
  Vamos adicionar a palavra extends
  */
+//  import {MyBase} from "MyBase";
+//  import {compute,val2} from "someOtherModule";
+
+// export class SimpleClass extends MyBase {
+//     constructor(){
+//         super();
+//         this.name = "Lucas";
+//     }
+//     get message(){
+//         let threshold = 40;
+//         /*
+//         Ao invés de usarmos as aspas simples ou duplas (' ou ")
+//         iremos utilizar a crase (`) dessa forma noss tranpiler irá 
+//         entender que alguns caracteres especiais deve ser traduzidos.
+//         */
+//         let result = `Hello ${this.name}, are you ${5+threshold} years old?`;
+        
+//         return result;
+//     }
+//     calculate(){
+//         return compute()+ val2;
+//     }
+
+// //Estamos utilizando Promises disponivel em ES2015
+//     startEngine(){
+//         var promise = new Promise((resolve, reject)=>{
+//             setTimeout(()=>{
+//                 resolve("Engine started!");
+//             },5000);
+//         });
+//        return promise;
+//     }
+// }
+
+
+//Versão 4 (Decorators and Class properties) EcmaScript 7
+// jspm install aurelia-framework aurelia-fetch-client
+
+
  import {MyBase} from "MyBase";
  import {compute,val2} from "someOtherModule";
+ import {inject} from "aurelia-framework";
+  import {HttpClient} from "aurelia-fetch-client";
 
+@inject(HttpClient)
 export class SimpleClass extends MyBase {
-    constructor(){
+    constructor(http){
         super();
         this.name = "Lucas";
     }
+
+    myProperty = 42;
+
     get message(){
         let threshold = 40;
         /*
@@ -70,7 +115,6 @@ export class SimpleClass extends MyBase {
     }
 
 //Estamos utilizando Promises disponivel em ES2015
-//
     startEngine(){
         var promise = new Promise((resolve, reject)=>{
             setTimeout(()=>{
@@ -79,8 +123,4 @@ export class SimpleClass extends MyBase {
         });
        return promise;
     }
-
 }
-
-
-
