@@ -47,6 +47,7 @@ Versão 3 (Inherance)
  Vamos adicionar a palavra extends
  */
  import {MyBase} from "MyBase";
+ import {compute,val2} from "someOtherModule";
 
 export class SimpleClass extends MyBase {
     constructor(){
@@ -54,10 +55,18 @@ export class SimpleClass extends MyBase {
         this.name = "Lucas";
     }
     get message(){
-        return "Hello ES2015";
+        let threshold = 40;
+        /*
+        Ao invés de usarmos as aspas simples ou duplas (' ou ")
+        iremos utilizar a crase (`) dessa forma noss tranpiler irá 
+        entender que alguns caracteres especiais deve ser traduzidos.
+        */
+        let result = `Hello ${this.name}, are you ${5+threshold} years old?`;
+        
+        return result;
     }
     calculate(){
-        return 43;
+        return compute()+ val2;
     }
 }
 
