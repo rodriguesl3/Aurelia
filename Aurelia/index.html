@@ -4,16 +4,27 @@
         <title>Aurelia</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.css" rel="stylesheet">
+        <link href="jspm_packages/github/twbs/bootstrap@3.3.7/css/bootstrap.css" rel="stylesheet">
+    
     </head>
-    <body aurelia-app>
+    <!--após criar uma pasta src ou app
+    dentro de config.js no objeto path,
+     adicione está linha de comando ("*":"app/*.js",)
+     sendo app o nome da pasta que criou.
+    -->
+
+    <!--<body aurelia-app>-->
+        <!--Caso não queira utilizar as configurações padrões do Aurelia para a inicialização
+        você pode deficir o seu próprio arquivo de configuração.
+        No exemplo abaixo estou utilizando o main.js dentro da pasta app.
+        Caso queira utilizar as configurações padrões não precisa passar nada, 
+        como mostra do body element comentado acima.
+        -->
+    <body aurelia-app="main">
         <script src="jspm_packages/system.js"></script>
         <script src="config.js"></script>
         <script>
             System.import('aurelia-bootstrapper');
-                        
         </script>
-
-
     </body>
 </html>
